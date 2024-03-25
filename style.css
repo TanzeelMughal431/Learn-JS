@@ -16,4 +16,5 @@ button {
 }
 .mathCalculation {
   width: 20vw;
+  gap: 0.5vw;
 }
