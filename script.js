@@ -9,5 +9,5 @@ function doo() {
 }
 //add two number 
 function ATN(){
-  
+  a+b
 }
