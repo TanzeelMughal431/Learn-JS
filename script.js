@@ -11,6 +11,6 @@ function doo() {
 function ATN() {
   let a = document.getElementById("ValueOne").value;
   let b = document.getElementById("ValueTwo").value;
-  let store = a+b;
+  let store = a + b;
   alert(store);
 }
