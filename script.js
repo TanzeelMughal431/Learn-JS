@@ -7,9 +7,9 @@ function doo() {
   let buton = document.createElement("button");
   buton.innerText = "This for clear All";
 }
-//add two number 
-function ATN(){
-  a=document.getElementById("ValueOne");
-  b=document.getElementById("ValueTwo");
-  let store =a+b;
+//add two number
+function ATN() {
+  let a = document.getElementById("ValueOne");
+  let b = document.getElementById("ValueTwo");
+  let store = a + b;
 }
