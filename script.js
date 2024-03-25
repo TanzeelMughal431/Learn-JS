@@ -8,4 +8,6 @@ function doo() {
   buton.innerText = "This for clear All";
 }
 //add two number 
-function ()
+function ATN(){
+  
+}
