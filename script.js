@@ -7,3 +7,5 @@ function doo() {
   let buton = document.createElement("button");
   buton.innerText = "This for clear All";
 }
+//add two number 
+function ()
