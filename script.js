@@ -9,5 +9,6 @@ function doo() {
 }
 //add two number 
 function ATN(){
-  let store =a+b
+  a=document.getElementById("Valueone");
+  let store =a+b;
 }
