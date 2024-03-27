@@ -11,10 +11,14 @@ function ATN() {
   let b = document.getElementById("ValueTwo").value;
   let store = a + b;
   // this is for confirm button to check the aler
-  
-  var okay = confirm(store +""+ "Is correct results ");
+
+  var okay = confirm(store + " " + "Is correct results ");
   if (okay) {
   } else {
     console.log("not ok");
   }
 }
+// --------------
+window.onunload = function () {
+  return confirm("Are you sure you want to leave this page?");
+};
