@@ -1,5 +1,3 @@
-
-
 function doo() {
   let targetbody = document.getElementById("inpt");
   targetbody.value = "";
@@ -11,6 +9,12 @@ function doo() {
 function ATN() {
   let a = document.getElementById("ValueOne").value;
   let b = document.getElementById("ValueTwo").value;
-  let store = a +   b;
-  alert(store);
+  let store = a + b;
+  // this is for confirm button to check the aler
+  
+  var okay = confirm(store +""+ "Is correct results ");
+  if (okay) {
+  } else {
+    console.log("not ok");
+  }
 }
