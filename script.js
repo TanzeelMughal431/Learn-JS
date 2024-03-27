@@ -1,3 +1,5 @@
+
+
 function doo() {
   let targetbody = document.getElementById("inpt");
   targetbody.value = "";
@@ -10,9 +12,11 @@ function ATN() {
   // parseFloat is use for convert to valoat value
   var a = parseFloat(document.getElementById("ValueOne").value);
   var b = parseFloat(document.getElementById("ValueTwo").value);
+
   let store = a + b;
+  var covrt = toWords(store);
   // this is for confirm button to check the aler
-  var okay = confirm(store + " " + "Is correct results ");
+  var okay = confirm(covrt + " " + "Is correct results ");
   if (okay) {
   } else {
     console.log("not ok");
@@ -21,4 +25,5 @@ function ATN() {
     return confirm("Are you sure you want to leave this page?");
   };
 }
+
 // --------------
