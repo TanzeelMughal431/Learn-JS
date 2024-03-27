@@ -1,4 +1,4 @@
-document.write("HEllo World");
+
 
 function doo() {
   let targetbody = document.getElementById("inpt");
