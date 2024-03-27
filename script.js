@@ -7,9 +7,9 @@ function doo() {
 }
 //add two number
 function ATN() {
-  // parseFloat is use for convert to valoat value 
-  var a =parseFloat( document.getElementById("ValueOne").value);
-  var b =parseFloat( document.getElementById("ValueTwo").value);
+  // parseFloat is use for convert to valoat value
+  var a = parseFloat(document.getElementById("ValueOne").value);
+  var b = parseFloat(document.getElementById("ValueTwo").value);
   let store = a + b;
   // this is for confirm button to check the aler
   var okay = confirm(store + " " + "Is correct results ");
@@ -17,8 +17,8 @@ function ATN() {
   } else {
     console.log("not ok");
   }
+  window.onunload = function () {
+    return confirm("Are you sure you want to leave this page?");
+  };
 }
 // --------------
-// window.onunload = function () {
-//   return confirm("Are you sure you want to leave this page?");
-// };
