@@ -18,3 +18,7 @@ button {
   width: 20vw;
   gap: 0.5vw;
 }
+hr {
+  background-color: white;
+  padding: 0.1vw;
+}

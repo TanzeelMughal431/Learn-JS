@@ -1,9 +1,9 @@
-function createPtag(textData) {
+function createPtag(textData, id) {
   var ptag = document.createElement("p");
   ptag.innerHTML = textData;
   ptag.classList.add("form-tool");
   ptag.style.fontSize = "3vw";
-  document.body.appendChild(ptag);
+  document.getElementById(id).appendChild(ptag);
 }
 
 function doo() {
@@ -30,13 +30,14 @@ function ATN() {
     return confirm("Are you sure you want to leave this page?");
   };
 }
-// -----------------
-var today = new Date();
-console.log(Date());
-createPtag(today);
-
-var dayy = today.getDay();
-let fuctnANDtext = "Day:" + dayy;
-createPtag(fuctnANDtext);
-
+// -----------------cick btn show date----------
+function showDate() {
+  var today = new Date();
+  console.log(Date());
+  createPtag(today, id);
+  var id = document.getElementById("createDate");
+  var dayy = today.getDay();
+  let fuctnANDtext = "Day:" + dayy;
+  createPtag(fuctnANDtext);
+}
 // --------------
