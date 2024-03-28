@@ -1,3 +1,10 @@
+function createPtag(textData) {
+  var ptag = document.createElement("p");
+  ptag.innerHTML = textData;
+  ptag.classList.add('form-tool')
+  document.body.appendChild(ptag);
+}
+
 function doo() {
   let targetbody = document.getElementById("inpt");
   targetbody.value = "";
@@ -22,5 +29,7 @@ function ATN() {
     return confirm("Are you sure you want to leave this page?");
   };
 }
+// -----------------
+var today = new Date();
 
 // --------------
