@@ -1,7 +1,7 @@
 function createPtag(textData) {
   var ptag = document.createElement("p");
   ptag.innerHTML = textData;
-  ptag.classList.add('form-tool')
+  ptag.classList.add("form-tool");
   document.body.appendChild(ptag);
 }
 
@@ -31,5 +31,7 @@ function ATN() {
 }
 // -----------------
 var today = new Date();
+console.log(today);
+createPtag(today);
 
 // --------------
