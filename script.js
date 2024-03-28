@@ -1,10 +1,10 @@
-function createPtag(textData) {
+function createPtag(textData, id) {
   var ptag = document.createElement("p");
   ptag.innerHTML = textData;
   ptag.classList.add("form-tool");
   ptag.style.fontSize = "3vw";
   // var ccc = document.getElementById(id);
-  document.body.appendChild(ptag);
+  document.getElementById(id).appendChild(ptag);
 }
 
 function doo() {
@@ -35,14 +35,14 @@ function ATN() {
 function showDate() {
   var today = new Date();
   // var today.toJSON
-  console.log(today);
-  var locall = today.toLocalString();
-  var hourss = today.getHours();
-  var minutess = today.getMinutes();
-  // var id = document.getElementById("createDate");
-  var innertxt =
-    "right now it is" + locall + "" + "at" + hourss + ":" + minutess;
+  var id = document.getElementById("cd");
+  console.log(id);
+  // var locall = today.toLocalString();
+  // var hourss = today.getHours();
+  // var minutess = today.getMinutes();
+  // var innertxt =
+  //   "right now it is" + locall + "" + "at" + hourss + ":" + minutess;
 
-  createPtag(innertxt);
+  createPtag(today, id);
 }
 // --------------
