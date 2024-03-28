@@ -1,9 +1,10 @@
-function createPtag(textData, id) {
+function createPtag(textData) {
   var ptag = document.createElement("p");
   ptag.innerHTML = textData;
   ptag.classList.add("form-tool");
   ptag.style.fontSize = "3vw";
-  document.getElementById(id).appendChild(ptag);
+  // var ccc = document.getElementById(id);
+  document.body.appendChild(ptag);
 }
 
 function doo() {
@@ -33,11 +34,15 @@ function ATN() {
 // -----------------cick btn show date----------
 function showDate() {
   var today = new Date();
-  console.log(Date());
-  createPtag(today, id);
-  var id = document.getElementById("createDate");
-  var dayy = today.getDay();
-  let fuctnANDtext = "Day:" + dayy;
-  createPtag(fuctnANDtext);
+  // var today.toJSON
+  console.log(today);
+  var locall = today.toLocalString();
+  var hourss = today.getHours();
+  var minutess = today.getMinutes();
+  // var id = document.getElementById("createDate");
+  var innertxt =
+    "right now it is" + locall + "" + "at" + hourss + ":" + minutess;
+
+  createPtag(innertxt);
 }
 // --------------
