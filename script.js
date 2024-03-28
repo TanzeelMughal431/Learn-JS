@@ -2,6 +2,7 @@ function createPtag(textData) {
   var ptag = document.createElement("p");
   ptag.innerHTML = textData;
   ptag.classList.add("form-tool");
+  ptag.style.fontSize = "3vw";
   document.body.appendChild(ptag);
 }
 
@@ -31,7 +32,11 @@ function ATN() {
 }
 // -----------------
 var today = new Date();
-console.log(today);
+console.log(Date());
 createPtag(today);
+
+var dayy = today.getDay();
+let fuctnANDtext = "Day:" + dayy;
+createPtag(fuctnANDtext);
 
 // --------------
