@@ -1,5 +1,3 @@
-
-
 function doo() {
   let targetbody = document.getElementById("inpt");
   targetbody.value = "";
@@ -14,9 +12,8 @@ function ATN() {
   var b = parseFloat(document.getElementById("ValueTwo").value);
 
   let store = a + b;
-  var covrt = toWords(store);
   // this is for confirm button to check the aler
-  var okay = confirm(covrt + " " + "Is correct results ");
+  var okay = confirm(store + " " + "Is correct results ");
   if (okay) {
   } else {
     console.log("not ok");
