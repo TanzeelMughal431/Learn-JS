@@ -28,3 +28,9 @@ P {
   font-size: 1.5vw;
   color: white;
 }
+#mainBG {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
