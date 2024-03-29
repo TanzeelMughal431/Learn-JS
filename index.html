@@ -87,7 +87,6 @@
     <hr />
     <!-- ------------------date differece-------------- -->
     <div id="mainBG">
-      <div id="output"></div>
       <p>Enter the start and ending of the event</p>
       <div id="inputDiv">
         <label for="start">Start</label>
@@ -95,8 +94,11 @@
         <label for="start">End</label>
         <input class="form-control" type="date" name="end" id="end" />
       </div>
-        <button onclick="process()">Check Difference</button>
-      
+      <button class="btn bg-dark text-white" onclick="process()">
+        Check Difference
+      </button>
+      <div class="border border-light pt-1 pr-2 pl-2 pb-1" id="output"></div>
+
       <a href="www.google.com">Google</a>
     </div>
     <hr />
