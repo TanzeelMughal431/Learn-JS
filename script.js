@@ -74,3 +74,4 @@ function process() {
   message = interval + " Differnece";
   output.innerText = message;
 }
+// -------------------end----------------------
