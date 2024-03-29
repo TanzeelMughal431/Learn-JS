@@ -48,3 +48,29 @@ function showDate() {
 }
 // --------------DAte difference script-----------------
 
+function process() {
+  // ------------get input values from index file-------------
+  var start = document.getElementById("start");
+  var end = document.getElementById("end");
+  var output = document.getElementById("output");
+  //   ---------------------------output value-----------------------
+  var message = "";
+  var interval = "";
+  var day = 1000 * 60 * 60 * 24;
+  // --------------------two new date---------
+  var startDate = new Date(start.value);
+  var endDate = new Date(end.value);
+  // -------------------conditions-------------
+  if (startDate.getTime() && endDate.getTime()) {
+    if (startDate < endDate) {
+      var diff = endDate - startDate;
+      if (diff <= day) {
+        interval = "1day";
+      } else {
+        interval = Math.round(diff / day) + " days";
+      }
+    }
+  }
+  message = interval + " Differnece";
+  output.innerText = message;
+}
