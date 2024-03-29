@@ -79,10 +79,29 @@
         </fieldset>
       </form>
     </div>
-    <hr>
-    <button id="createDate" class="btn bg-dark text-white" onclick="showDate()">Show Date</button>
+    <hr />
+    <button id="createDate" class="btn bg-dark text-white" onclick="showDate()">
+      Show Date
+    </button>
     <div id="cd"></div>
-    <hr>
+    <hr />
+    <!-- ------------------date differece-------------- -->
+    <div id="blurBG">
+      <div id="output"></div>
+      <p>Enter the start and ending of the event</p>
+      <div id="inputDiv">
+        <label for="start">Start</label
+        ><input type="date" name="start" id="start" />
+        <label for="start">End</label><input type="date" name="end" id="end" />
+      </div>
+
+      <div>
+        <button onclick="process()">Check Difference</button>
+      </div>
+      <a href="www.google.com">Google</a>
+    </div>
+
+    <hr />
     <a href="blank.html">Go Next page blank</a>
     <script src="script.js"></script>
   </body>
