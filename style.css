@@ -22,13 +22,15 @@ hr {
   background-color: white;
   padding: 0.1vw;
 }
-/* P {
-  background-color: rgb(35, 37, 41);
-  padding: 1vw;
+P {
+  border:3px solid black;
+  padding: 1vw 3vw;
   font-size: 1.5vw;
   color: white;
-} */
+}
 #mainBG {
+  margin-top: 10px;
+  margin-bottom: 3px;
   display: flex;
   flex-direction: column;
   align-items: center;
