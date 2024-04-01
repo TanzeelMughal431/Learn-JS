@@ -85,8 +85,10 @@ function addTask() {
   if (task.value) {
     task[task.lenght] = task;
     message = "you have" + task.lenght + "task(s) in your to-do list.";
-    if(){
-      
+    if (output.textContent !== undefined) {
+      output.textContent = numbers;
+    } else {
+      output.innerText = numbers;
     }
   }
   // add task into Array
