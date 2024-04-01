@@ -79,16 +79,16 @@ var task = [];
 function addTask() {
   // ----get HTML Element
   var task = document.getElementById("task");
-  var output = document.getElementById("output");
+  var outputStatus = document.getElementById("outputStatus");
   // declare variable for output
-  var message = "";
+  var messageStatus = "";
   if (task.value) {
     task[task.lenght] = task;
-    message = "you have" + task.lenght + "task(s) in your to-do list.";
-    if (output.textContent !== undefined) {
-      output.textContent = message;
+    messageStatus = "you have" + task.lenght + "task(s) in your to-do list.";
+    if (outputStatus.textContent !== undefined) {
+      outputStatus.textContent = messageStatus;
     } else {
-      output.innerText = message;
+      outputStatus.innerText = messageStatus;
     }
     return false;
   }
