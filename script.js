@@ -75,12 +75,12 @@ function process() {
   output.innerText = message;
 }
 // -------------------Working with array----------------------
+var inputtask = [];
+var task = document.getElementById("task");
+var outputStatus = document.getElementById("outputStatus");
 function addTask() {
-  var inputtask = [];
   // console.log(lenght + "its  input NO");
   // ----get HTML Element
-  var task = document.getElementById("task");
-  var outputStatus = document.getElementById("outputStatus");
   // declare variable for output
   if (task.value) {
     inputtask.push(task.value);
@@ -90,11 +90,16 @@ function addTask() {
     alert("ERror re Enter the task");
     return;
   }
+  updater();
+}
+function updater() {
   var lenght = inputtask.length;
   if (lenght !== 0) {
     var messageStatus = "";
     messageStatus = "you have " + lenght + " task(s) in your to-do list.";
     outputStatus.innerText = messageStatus;
   }
-  // add task into Array
+}
+function ShowArray(){
+  
 }
