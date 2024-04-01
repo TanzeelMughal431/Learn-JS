@@ -75,3 +75,7 @@ function process() {
   output.innerText = message;
 }
 // -------------------Working with array----------------------
+var task = [];
+function addTask(){
+  
+}
