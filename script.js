@@ -84,7 +84,7 @@ function addTask() {
   // declare variable for output
   if (task.value) {
     inputtask.push(task.value);
-    inputtask.value = "";
+    task.value = "";
     alert("push done");
   } else {
     alert("ERror re Enter the task");
