@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .task-item {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="mt-5">Task Manager</h2>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="taskInput"
+          placeholder="Enter new task"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="addTask">
+            Add Task
+          </button>
+        </div>
+      </div>
+      <div id="taskList"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      var tasks = [];
+
+      document.getElementById("addTask").addEventListener("click", function () {
+        var taskValue = document.getElementById("taskInput").value.trim();
+        if (taskValue) {
+          tasks.push(taskValue);
+          document.getElementById("taskInput").value = ""; // Clear input field
+          updateTaskList();
+        }
+      });
+
+      function updateTaskList() {
+        var taskList = document.getElementById("taskList");
+        taskList.innerHTML = "";
+        tasks.forEach(function (task, index) {
+          var taskEl = document.createElement("div");
+          taskEl.className = "task-item";
+          taskEl.innerHTML = `<span>${task}</span>
+                        <button class="btn btn-danger btn-sm ml-2" onclick="removeTask(${index})">Remove</button>
+                        <button class="btn btn-success btn-sm ml-2" onclick="alert('Task: ${task}')">Check Status</button>`;
+          taskList.appendChild(taskEl);
+        });
+      }
+
+      function removeTask(index) {
+        tasks.splice(index, 1);
+        updateTaskList();
+      }
+    </script>
+  </body>
+</html>
