@@ -76,6 +76,18 @@ function process() {
 }
 // -------------------Working with array----------------------
 var task = [];
-function addTask(){
-  
+function addTask() {
+  // ----get HTML Element
+  var task = document.getElementById("task");
+  var output = document.getElementById("output");
+  // declare variable for output
+  var message = "";
+  if (task.value) {
+    task[task.lenght] = task;
+    message = "you have" + task.lenght + "task(s) in your to-do list.";
+    if(){
+      
+    }
+  }
+  // add task into Array
 }
