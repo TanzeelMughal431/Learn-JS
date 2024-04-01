@@ -75,22 +75,26 @@ function process() {
   output.innerText = message;
 }
 // -------------------Working with array----------------------
-var task = [];
 function addTask() {
+  var inputtask = [];
+  // console.log(lenght + "its  input NO");
   // ----get HTML Element
   var task = document.getElementById("task");
   var outputStatus = document.getElementById("outputStatus");
   // declare variable for output
-  var messageStatus = "";
   if (task.value) {
-    task[task.lenght] = task;
-    messageStatus = "you have" + task.lenght + "task(s) in your to-do list.";
-    if (outputStatus.textContent !== undefined) {
-      outputStatus.textContent = messageStatus;
-    } else {
-      outputStatus.innerText = messageStatus;
-    }
-    return false;
+    inputtask.push(task.value);
+    inputtask.value = "";
+    alert("push done");
+  } else {
+    alert("ERror re Enter the task");
+    return;
+  }
+  var lenght = inputtask.length;
+  if (lenght !== 0) {
+    var messageStatus = "";
+    messageStatus = "you have " + lenght + " task(s) in your to-do list.";
+    outputStatus.innerText = messageStatus;
   }
   // add task into Array
 }
