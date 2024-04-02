@@ -106,15 +106,25 @@ function ShowArray() {
   var outpotList = document.getElementById("ShowArray");
   let mesage = "<h2>To-Do</h2><ol>";
   var totLength = inputtask.length;
-  for (var i = 0, count = totLength.Length; i < count; i++) {
-    mesage += "<li>" + inputtask[i] + "</li>";
+  for (var i = 0, count = totLength; i < count; i++) {
+    mesage += "<li>" + count + ". " + inputtask[i] + "</li>";
   }
   mesage += "</ol>";
   outpotList.innerHTML = mesage;
 }
 
 function saveData() {
-  var textToSave = document.getElementById("data").value;
+  var textToSave = inputtask.value;
   localStorage.setItem("savedData", textToSave);
   alert("Data saved successfully!");
+}
+
+function retrieveData() {
+  var savedData = localStorage.getItem("savedData");
+  if (savedData) {
+    inputtask.value = savedData;
+    alert("Data retrieved successfully!");
+  } else {
+    alert("No data found!");
+  }
 }
