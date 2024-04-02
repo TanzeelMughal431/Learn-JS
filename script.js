@@ -102,29 +102,28 @@ function updater() {
 }
 ///////show All elements of Array
 
-function ShowArray() {
+function ShowArray(iValue) {
   var outpotList = document.getElementById("ShowArray");
   let mesage = "<h2>To-Do</h2><ol>";
   var totLength = inputtask.length;
   for (var i = 0, count = totLength; i < count; i++) {
     mesage += "<li>" + count + ". " + inputtask[i] + "</li>";
+    var iValue = inputtask[i];
+    saveData();
   }
   mesage += "</ol>";
+  mesage += "<hr>";
   outpotList.innerHTML = mesage;
 }
 
-function saveData() {
-  var textToSave = inputtask.value;
-  localStorage.setItem("savedData", textToSave);
-  alert("Data saved successfully!");
+function saveData(iValue) {
+  var textToSave = iValue;
+  localStorage.setItem(`${count}`, textToSave);
 }
 
 function retrieveData() {
-  var savedData = localStorage.getItem("savedData");
-  if (savedData) {
-    inputtask.value = savedData;
-    alert("Data retrieved successfully!");
-  } else {
-    alert("No data found!");
+  var retrieveData = document.getElementById("retrieveData");
+  for (var i = 0, count = totLength; i < count; i++) {
+    retrieveData.innerText = `${localStorage.getItem(count)}`;
   }
 }
