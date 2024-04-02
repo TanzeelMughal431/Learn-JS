@@ -104,13 +104,8 @@ function updater() {
 
 function ShowArray() {
   var outpotList = document.getElementById("ShowArray");
-  for (
-    inputtask.indexOf = 0;
-    inputtask.indexOf <= length;
-    inputtask.indexOf++
-  ) {
-    var cfg = inputtask.indexOf;
-    console.log(cfg);
-    outpotList.innerText = inputtask.value;
+  let mesage = "<h2>To-Do</h2><ol>";
+  for (var i = 0, count = inputtask.length; i < count; i++) {
+    mesage += "<li>" + task[i] + "</li>";
   }
 }
