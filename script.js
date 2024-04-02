@@ -100,7 +100,7 @@ function updater() {
     outputStatus.innerText = messageStatus;
   }
 }
-///////show All elements of Array
+// ------------show All elements of Array use local storage-----------
 
 function ShowArray(iValue) {
   var outpotList = document.getElementById("ShowArray");
