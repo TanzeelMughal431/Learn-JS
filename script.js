@@ -100,6 +100,17 @@ function updater() {
     outputStatus.innerText = messageStatus;
   }
 }
-function ShowArray(){
-  
+///////show All elements of Array
+
+function ShowArray() {
+  var outpotList = document.getElementById("ShowArray");
+  for (
+    inputtask.indexOf = 0;
+    inputtask.indexOf <= length;
+    inputtask.indexOf++
+  ) {
+    var cfg = inputtask.indexOf;
+    console.log(cfg);
+    outpotList.innerText = inputtask.value;
+  }
 }
