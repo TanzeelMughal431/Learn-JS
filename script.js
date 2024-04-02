@@ -74,16 +74,20 @@ function process() {
   message = interval + " Differnece";
   output.innerText = message;
 }
+// ----------------------------New----------------------------
+//============================================================
 // -------------------Working with array----------------------
 var inputtask = [];
 var task = document.getElementById("task");
 var outputStatus = document.getElementById("outputStatus");
 function addTask() {
-  // console.log(lenght + "its  input NO");
-  // ----get HTML Element
-  // declare variable for output
+  // console.log( + "its  input NO");
+
   if (task.value) {
     inputtask.push(task.value);
+    var pushV = inputtask.value;
+    var iValue = inputtask.index;
+    saveData(iValue, pushV);
     task.value = "";
     alert("push done");
   } else {
@@ -102,23 +106,24 @@ function updater() {
 }
 // ------------show All elements of Array use local storage-----------
 
-function ShowArray(iValue) {
+function ShowArray() {
   var outpotList = document.getElementById("ShowArray");
   let mesage = "<h2>To-Do</h2><ol>";
   var totLength = inputtask.length;
   for (var i = 0, count = totLength; i < count; i++) {
     mesage += "<li>" + count + ". " + inputtask[i] + "</li>";
-    var iValue = inputtask[i];
-    saveData();
   }
   mesage += "</ol>";
   mesage += "<hr>";
   outpotList.innerHTML = mesage;
 }
 
-function saveData(iValue) {
-  var textToSave = iValue;
-  localStorage.setItem(`${count}`, textToSave);
+function saveData(noC, tostore) {
+  noC = localStorage.key(noC);
+  var textToSave = tostore;
+  var ggx = textToSave;
+  console.log(textToSave);
+  localStorage.setItem(`${noC}`, `${ggx}`);
 }
 
 function retrieveData() {
