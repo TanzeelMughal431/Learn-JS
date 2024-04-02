@@ -111,7 +111,9 @@ function ShowArray() {
   let mesage = "<h2>To-Do</h2><ol>";
   var totLength = inputtask.length;
   for (var i = 0, count = totLength; i < count; i++) {
-    mesage += "<li>" + count + ". " + inputtask[i] + "</li>";
+    // var fitching = localStorage.getItem(count);
+    console.log(localStorage.getItem(count), ": this is you data");
+    mesage += "<li>" + count + ". " + `${localStorage.getItem("0")} ` + "</li>";
   }
   mesage += "</ol>";
   mesage += "<hr>";
@@ -126,7 +128,7 @@ function saveData(tostore) {
     localStorage.setItem(i, tostore), i++;
   }
   var displayDiv = document.getElementById("displayData");
-  displayDiv.textContent = "Stored Data: " + (i ? i : "None");
+  // displayDiv.innerText = "Stored Data: " + (i ? i : "None");
   console.log(localStorage.getItem(0));
   // var textToSave = tostore;
   // console.log(textToSave);
