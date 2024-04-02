@@ -111,8 +111,8 @@ function ShowArray() {
   let mesage = "<h2>To-Do</h2><ol>";
   var totLength = inputtask.length;
   for (var i = 0, count = totLength; i < count; i++) {
-    // var fitching = localStorage.getItem(count);
-    console.log(localStorage.getItem(count), ": this is you data");
+    // var fitching = localStorage.getItem(count);                         
+    console.log(localStorage.getItem(count), ": this is you data");                  /////fetching data form local storage
     mesage += "<li>" + count + ". " + `${localStorage.getItem("0")} ` + "</li>";
   }
   mesage += "</ol>";
