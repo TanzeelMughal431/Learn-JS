@@ -74,20 +74,20 @@ function process() {
   message = interval + " Differnece";
   output.innerText = message;
 }
-// ----------------------------New----------------------------
-//============================================================
-// -------------------Working with array----------------------
+// ----------------------------New-------------------------------------------------------------------
+//===================================================================================================
+// -------------------Working with array--------------------------------------------------------------
 var inputtask = [];
 var task = document.getElementById("task");
 var outputStatus = document.getElementById("outputStatus");
-function addTask() {
+function addTask(pushV) {
   // console.log( + "its  input NO");
 
   if (task.value) {
     inputtask.push(task.value);
-    var pushV = inputtask.value;
-    var iValue = inputtask.index;
-    saveData(iValue, pushV);
+    var pushV = task.value;
+    // var iValue = inputtask.index;
+    saveData(pushV);
     task.value = "";
     alert("push done");
   } else {
@@ -118,9 +118,9 @@ function ShowArray() {
   outpotList.innerHTML = mesage;
 }
 
-function saveData(noC, tostore) {
-  noC = localStorage.key(noC);
-  var textToSave = tostore;
+function saveData(tostore) {
+  // noC = localStorage.key();
+  // var textToSave = tostore;
   var ggx = textToSave;
   console.log(textToSave);
   localStorage.setItem(`${noC}`, `${ggx}`);
