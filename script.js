@@ -119,16 +119,17 @@ function ShowArray() {
 }
 
 function saveData(tostore) {
-  // noC = localStorage.key();
+  i = 0;
+  if (i == 0) {
+    // noC = localStorage.key();
+    // var ggx = tostore;
+    localStorage.setItem(i, tostore), i++;
+  }
+  var displayDiv = document.getElementById("displayData");
+  displayDiv.textContent = "Stored Data: " + (i ? i : "None");
+  console.log(localStorage.getItem(0));
   // var textToSave = tostore;
-  var ggx = textToSave;
-  console.log(textToSave);
-  localStorage.setItem(`${noC}`, `${ggx}`);
+  // console.log(textToSave);
 }
 
-function retrieveData() {
-  var retrieveData = document.getElementById("retrieveData");
-  for (var i = 0, count = totLength; i < count; i++) {
-    retrieveData.innerText = `${localStorage.getItem(count)}`;
-  }
-}
+function displayData() {}
