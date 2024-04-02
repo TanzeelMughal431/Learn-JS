@@ -105,7 +105,16 @@ function updater() {
 function ShowArray() {
   var outpotList = document.getElementById("ShowArray");
   let mesage = "<h2>To-Do</h2><ol>";
-  for (var i = 0, count = inputtask.length; i < count; i++) {
-    mesage += "<li>" + task[i] + "</li>";
+  var totLength = inputtask.length;
+  for (var i = 0, count = totLength.Length; i < count; i++) {
+    mesage += "<li>" + inputtask[i] + "</li>";
   }
+  mesage += "</ol>";
+  outpotList.innerHTML = mesage;
+}
+
+function saveData() {
+  var textToSave = document.getElementById("data").value;
+  localStorage.setItem("savedData", textToSave);
+  alert("Data saved successfully!");
 }
