@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -16,13 +22,17 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
 
-     nav {
+      nav {
         padding: 1.3vw 1vw;
+        margin: 0vw 1.5vw;
         font-size: 2.2vw;
         display: flex;
         /* flex-direction: row; */
         align-items: center;
         justify-content: space-between;
+      }
+      nav > i {
+        font-size: 1.5vw;
       }
       nav h4 {
         font-weight: 400;
@@ -30,7 +40,10 @@
       #leftContent {
         display: flex;
         align-items: center;
-        gap: 2vw;
+        gap: 1vw;
+      }
+      #leftContent > i {
+        font-size: 3.4vw;
       }
       #boldDO {
         font-weight: bold;
@@ -44,8 +57,8 @@
         display: flex;
         flex-direction: column;
         gap: 1vw;
-        padding: 10vw 15vw 1vw;
-        padding-top: 11vw;
+        padding: 6vw 15vw 1vw;
+        /* padding-top: 11vw; */
       }
       .MainCon > a {
         margin-top: 1vw;
@@ -68,10 +81,10 @@
     <header>
       <nav id="Contanier">
         <div id="leftContent">
-          <img src="#" alt="" />
+          <i class="fa-brands fa-slack"></i>
           <h4>Crio.<span id="boldDO">Do</span></h4>
         </div>
-        <i>///</i>
+        <i class="fa-solid fa-bars"></i>
       </nav>
     </header>
     <div class="MainCon">
