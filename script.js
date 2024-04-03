@@ -110,11 +110,11 @@ function ShowArray() {
   var outpotList = document.getElementById("ShowArray");
   let mesage = "<h2>To-Do</h2><ol>";
   var totLength = inputtask.length;
-  for (var i = 0, count = totLength; i < count; i++) {
-    // var fitching = localStorage.getItem(count);                         
-    console.log(localStorage.getItem(count), ": this is you data");                  /////fetching data form local storage
-    mesage += "<li>" + count + ". " + `${localStorage.getItem("0")} ` + "</li>";
-  }
+  // for (1==1) {
+  // var fitching = localStorage.getItem(count);
+  console.log(localStorage.getItem("0"), ": this is you data"); /////fetching data form local storage
+  mesage += "<li>" + '1' + ". " + `${localStorage.getItem("0")} ` + "</li>";
+  // }
   mesage += "</ol>";
   mesage += "<hr>";
   outpotList.innerHTML = mesage;
